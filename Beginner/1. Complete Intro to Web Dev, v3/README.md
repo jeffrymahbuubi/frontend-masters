@@ -14,7 +14,7 @@
 
 #### [2. Common HTML Tags](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/types-of-tags)
 
-#### 3. [Attributes, Class, & IDs](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/attributes)
+#### [3. Attributes, Class, & IDs](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/attributes)
 
 #### [4. Organizing HTML](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/organizing-html)
 
