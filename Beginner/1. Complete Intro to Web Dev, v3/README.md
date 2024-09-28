@@ -20,6 +20,8 @@
 
 #### [5. Head & Meta Tags](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/head-and-meta-tags)
 
+- In VS Code, type `html:5` to generate boilerplate to start your website project.
+
 #### [6. HTML Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/html-project)
 
 ### CSS
