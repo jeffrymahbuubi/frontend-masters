@@ -24,6 +24,8 @@
 
 #### [6. HTML Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/html-project)
 
+- In VS Code, type `lorem10`, for example, to generate a `lorem` with 10 sentences. You can increase or decrease the number to generate the `lorem`.
+
 ### CSS
 
 #### [1. Rules](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/rules)
