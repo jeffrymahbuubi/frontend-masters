@@ -66,7 +66,7 @@
 
 #### [11. Arrays](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/arrays)
 
-### Puttint it All Together
+### Putting it All Together
 
 #### [1. The DOM](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/the-dom)
 
