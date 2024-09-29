@@ -54,6 +54,8 @@
 
 #### [5. Flex](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/flex)
 
+- `justify-content` handles the horizontal justification and `align-items` handles the vertical alignment.
+
 #### [6. Grid](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/grid)
 
 #### [7. Animations](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/animations)
