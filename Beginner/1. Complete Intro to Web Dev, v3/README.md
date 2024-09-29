@@ -25,6 +25,7 @@
 #### [6. HTML Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/html/html-project)
 
 - In VS Code, type `lorem10`, for example, to generate a `lorem` with 10 sentences. You can increase or decrease the number to generate the `lorem`.
+- A tip when creating HTML is to organize your code. You can use the `class` attribute for naming. Also, use semantic HTML, such as `<section></section>` for sections, `<article></article>` when creating an article, and `<nav></nav>` when creating navigation.
 
 ### CSS
 
