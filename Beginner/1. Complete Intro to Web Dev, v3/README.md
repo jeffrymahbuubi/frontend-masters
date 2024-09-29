@@ -129,6 +129,24 @@
 
 #### [4. Loops](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/loops)
 
+- Subtraction (`-=`), Multiplication (`*=`), Division (`/=`), Exponentiation (`**=`) are just shorthand operations.
+- `++variable` (Pre-Increment): The value of `variable` is incremented first, and then the new value is used.
+- `variable++` (Post-Increment): The current value of `variable` is used first, and then the variable is incremented.
+
+  ```javascript
+  let camelCase = 5;
+
+  // Pre-increment
+  console.log(++camelCase); // Output: 6
+  console.log(camelCase); // Output: 6
+
+  camelCase = 5; // Resetting the value for comparison
+
+  // Post-increment
+  console.log(camelCase++); // Output: 5
+  console.log(camelCase); // Output: 6
+  ```
+
 #### [5. Exercise](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/exercise)
 
 #### [6. Functions](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/functions)
