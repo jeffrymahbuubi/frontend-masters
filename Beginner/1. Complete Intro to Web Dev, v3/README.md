@@ -58,6 +58,10 @@
 
 #### [6. Grid](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/grid)
 
+- `grid` useful is more laying out of page (which is are frequently grid-like).
+- A common use case for grid which is for laying out whole webpage
+- Check [caniuse](https://caniuse.com/?search=grid) to check the support for `grid` on all browsers.
+
 #### [7. Animations](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/animations)
 
 #### [8. Putting It Together](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/putting-it-together)
