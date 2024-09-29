@@ -125,7 +125,7 @@
 
 #### [3. Control Flow](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/control-flow)
 
-- It is recommended to use triple-equals (`===`), which means the conditions must be true in both value and data type. Using double-equals (`==`) could lead to type coercion. For example, `false == 0` is true, but you will most likely prefer it to be false because they are different data types.
+- It is recommended to use triple-equals (`===`), which means the conditions must be true in both value and data type. Using double-equals (`==`) could lead to **type coercion**. For example, `false == 0` is true, but you will most likely prefer it to be false because they are different data types.
 
 #### [4. Loops](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/loops)
 
