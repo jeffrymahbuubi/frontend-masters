@@ -61,6 +61,17 @@
 - `grid` useful is more laying out of page (which is are frequently grid-like).
 - A common use case for grid which is for laying out whole webpage
 - Check [caniuse](https://caniuse.com/?search=grid) to check the support for `grid` on all browsers.
+- The powerful feature of `grid` is that you can describe your layout in English as follows (check the course website for details!).:
+
+  ```css
+  .my-page {
+    display: grid;
+    grid-template-areas:
+      "nav-header  nav-header  nav-header  nav-side"
+      "main-body   main-body   .           nav-side"
+      "footer      footer      footer      footer";
+  }
+  ```
 
 #### [7. Animations](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/animations)
 
