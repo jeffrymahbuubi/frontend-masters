@@ -30,6 +30,8 @@
 
 #### [1. Rules](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/rules)
 
+- A tip: if you want to change the style of certain text in a paragraph, you can wrap the text using `<span></span>`.
+
 #### [2. Selectors and the Cascade](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/selectors-and-the-cascade)
 
 #### [3. Pseudoclasses and Pseudoelements](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/pseudoclasses-and-pseudoelements)
