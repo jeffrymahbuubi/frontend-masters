@@ -111,7 +111,17 @@
 
 #### [1. Intro](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/intro)
 
+- The logical process of a website is to put the `stylesheet (CSS)` first, then the `HTML` (the content), and lastly the `<script src="./logic.js"></script>` in the `body` of the HTML.
+
 #### [2. Numbers, Strings, and Booleans](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/numbers-strings-and-booleans)
+
+- Template literals are literals with backticks (`) which enable the use of multi-line strings.
+
+  ```javascript
+  const firstName = "Jeffry";
+  const lastName = "Mahbuubi";
+  const sentence = `Hello my name is ${firstName} ${lastName}`;
+  ```
 
 #### [3. Control Flow](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/control-flow)
 
