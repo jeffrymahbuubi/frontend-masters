@@ -75,6 +75,32 @@
 
 #### [7. Animations](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/animations)
 
+- We can define animations using only the given keyframes. Version 1 and the former do different things. The first one defines multiple stages of the animation (0%, 25%, and 100%), allowing for more complex animations with intermediate steps.
+
+  ```css
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  ```
+
+  or
+
+  ```css
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  ```
+
 #### [8. Putting It Together](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/putting-it-together)
 
 #### [9. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/project)
