@@ -43,6 +43,14 @@
 #### [4. Layout CSS](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/layout-css)
 
 - By default, every tag in CSS has a `display` property. For example, `div`s are `display: block` by default, while `span`s are `display: inline`.
+- `height`, `width`, `padding`, `border`, and `margin` cannot be manipulated if the element is `display: inline`.
+- One exception in CSS is to use the given properties as they are. For example, suppose you set a `div` with `width: 100px; border: 3px` (it will apply `3px` on the right and `3px` on the left). If you want the `div` to have `100px` including the border, not `106px`, you should use the `box-sizing` property.
+
+  ```css
+  * {
+    box-sizing: border-box;
+  }
+  ```
 
 #### [5. Flex](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/flex)
 
