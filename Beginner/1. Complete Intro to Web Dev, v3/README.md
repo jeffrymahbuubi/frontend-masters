@@ -36,6 +36,7 @@
 #### [2. Selectors and the Cascade](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/selectors-and-the-cascade)
 
 - A tip when naming a `class` is to name it based on what it represents, not what it looks like. For example, use `class='branding'` instead of `class='red-branding'`.
+- In general, avoid excessive cascading. If you are using pre-made components like Bootstrap and want to apply your new style, you can add a new class to the HTML element and place your new style at the bottom of the CSS file to override the previous style..
 
 #### [3. Pseudoclasses and Pseudoelements](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/pseudoclasses-and-pseudoelements)
 
