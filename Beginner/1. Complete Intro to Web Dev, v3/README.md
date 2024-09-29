@@ -105,6 +105,8 @@
 
 #### [9. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/project)
 
+- One thing that can be improved is the `nav` element. Since there is no button to navigate, it is better to use `<header>` because it makes more semantic sense.
+
 ### JavaScript
 
 #### [1. Intro](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/intro)
