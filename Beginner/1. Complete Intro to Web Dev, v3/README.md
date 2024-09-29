@@ -35,6 +35,8 @@
 
 #### [2. Selectors and the Cascade](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/selectors-and-the-cascade)
 
+- A tip when naming a `class` is to name it based on what it represents, not what it looks like. For example, use `class='branding'` instead of `class='red-branding'`.
+
 #### [3. Pseudoclasses and Pseudoelements](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/pseudoclasses-and-pseudoelements)
 
 #### [4. Layout CSS](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/layout-css)
