@@ -149,6 +149,32 @@
 
 #### [5. Exercise](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/exercise)
 
+- Using a for-loop to log an emoji given a condition:
+
+  ```javascript
+  const timesToRepeat = 10;
+  const character = "🐩";
+
+  answer = "";
+
+  for (i = 0; i < timesToRepeat; i++) {
+    answer += character;
+  }
+
+  console.log(answer);
+
+  // 🐩🐩🐩🐩🐩🐩🐩🐩🐩🐩🐩
+  ```
+
+- Another way is to use a `built-function`:
+
+  ```javascript
+  const timesToRepeat = 10
+  const character "🐩"
+
+  console.log("".padStart(timesToRepeat, character))
+  ```
+
 #### [6. Functions](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/functions)
 
 #### [7. Scope](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/scope)
@@ -178,3 +204,7 @@
 #### [3. async/await](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/async-await)
 
 #### [4. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/project)
+
+```
+
+```
