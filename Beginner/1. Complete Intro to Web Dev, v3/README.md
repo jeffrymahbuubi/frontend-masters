@@ -42,6 +42,8 @@
 
 #### [4. Layout CSS](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/layout-css)
 
+- By default, every tag in CSS has a `display` property. For example, `div`s are `display: block` by default, while `span`s are `display: inline`.
+
 #### [5. Flex](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/flex)
 
 #### [6. Grid](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/css/grid)
