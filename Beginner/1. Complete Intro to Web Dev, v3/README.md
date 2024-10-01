@@ -221,6 +221,34 @@
 
 #### [11. Arrays](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/arrays)
 
+- There is a built-in functio to do iteration which is called `forEach`, as given example:
+
+  ```javascript
+  const cities = [
+    "Seattle",
+    "San Francisco",
+    "Salt Lake City",
+    "Amsterdam",
+    "Hong Kong",
+  ];
+
+  let timesCalled = 0;
+  function logCity(city) {
+    console.log(timesCalled, city);
+    timescalled++;
+  }
+
+  cities.forEach(logCity);
+
+  /* log
+  0 "Seattle"
+  1 "San Francisco"
+  2 "Salt Lake City"
+  3 "Amsterdam"
+  4 "Hong Kong"
+  */
+  ```
+
 ### Putting it All Together
 
 #### [1. The DOM](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/the-dom)
