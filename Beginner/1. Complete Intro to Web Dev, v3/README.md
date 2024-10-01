@@ -271,6 +271,8 @@
 
 - You will notice that in CSS you write `background-color`, while in the DOM, when using JavaScript, you use `backgroundColor`. The `background-color` property in CSS corresponds to the `backgroundColor` property in JavaScript. This is due to JavaScript's camelCase naming convention for CSS properties.
 
+- Visit this link [HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), which will give you an idea of what elements you can manipulate with the DOM in HTML.
+
 #### [2. Events and Listeners](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/events-and-listeners)
 
 #### [3. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/project)
