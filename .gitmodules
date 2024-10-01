@@ -1,0 +1,3 @@
+[submodule "Computer-Science/1. Complete Intro to Computer Science/algorithms-exercise"]
+	path = Computer-Science/1. Complete Intro to Computer Science/algorithms-exercise
+	url = git@github.com:jeffrymahbuubi/algorithms-exercises.git
