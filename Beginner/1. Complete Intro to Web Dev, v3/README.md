@@ -185,6 +185,40 @@
 
 #### [10. Context](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/context)
 
+- The `this` keyword refers to the context where a piece of code, such as a function's body, is supposed to run. See this [MDN: this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) for details.
+- There is a context where we use the `this` keyword. For example, in this case, `pulledOutGetAddress` will be `undefined` because the `this` keyword doesn't know where to refer to in the object.
+
+  ```javascript
+  const me = {
+    name: {
+      first: "Brian",
+      last: "Holt",
+    },
+    location: {
+      streetNumber: 500,
+      street: "Fakestreet",
+      city: "Seattle",
+      state: "WA",
+      zipCode: 55555,
+      country: "USA",
+    },
+    getAddress() {
+      return `${this.name.first} ${this.name.last}
+  ${this.location.streetNumber} ${this.location.street}
+  ${this.location.city}, ${this.location.state} ${this.location.zipCode}
+  ${this.location.country}`;
+    },
+  };
+
+  console.log(me.getAddress());
+
+  const pulledOutGetAddress = me.getAddress();
+  console.log(pulledOutGetAddress); // worked
+  console.log(pulledOutGetAddress()); // undefined
+  ```
+
+- The `this` keyword in the global scope refers to the `window` object. The `console` is also a part of the `window` object, so everything that "has no context" is actually stored in the `window`.
+
 #### [11. Arrays](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/javascript/arrays)
 
 ### Putting it All Together
@@ -204,7 +238,3 @@
 #### [3. async/await](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/async-await)
 
 #### [4. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/project)
-
-```
-
-```
