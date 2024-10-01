@@ -253,6 +253,22 @@
 
 #### [1. The DOM](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/the-dom)
 
+- So what is `document`? The `document` object basically allows you to reach into the HTML and change or edit it. For example:
+
+  ```javascript
+  <div class="red-square"></div>
+
+  .red-square {
+    color: crimson;
+    width: 100px;
+    height: 100px;
+  }
+
+  const redSquare = document.querySelector(".red-square")
+  // <div class="red-square" style="background-color: limegreen;"></div>
+  redSquare.style.backgroundColor = "red"
+  ```
+
 #### [2. Events and Listeners](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/events-and-listeners)
 
 #### [3. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/project)
