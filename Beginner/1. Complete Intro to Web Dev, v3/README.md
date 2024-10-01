@@ -275,6 +275,45 @@
 
 #### [2. Events and Listeners](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/events-and-listeners)
 
+- Websites are meant to be reactive to users. To be reactive, we need to wait for them to interact, such as clicking a button. We achieve this by waiting for **events**. We respond to these events by using **event listeners**.
+- The method to add **event listeners** is, for example:
+
+  ```javascript
+  const button = document.querySelector(".event-button");
+  button.addEventListener("click", function () {
+    alert("Hey there!");
+  });
+  ```
+
+- **Event Delegation** and **Event Bubbling** are also two concepts that might be asked during an interview. For example, suppose you have a group of elements that you need to listen for events on. You could write an event listener for each element, but this would be tedious. Instead, a more efficient approach is to use **event delegation**. This leverages **event bubbling**, where an event fired on an element propagates up to its parent, and then to its parent's parent, and so on. By attaching a single event listener to a common ancestor, you can handle events for multiple child elements.
+
+  ```javascript
+  // You could write an event listener for each button
+  <div class="button-container">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+  </div>;
+
+  // Instead you can target the class "button-container"
+  document
+    .querySelector(".button-container")
+    .addEventListener("click", function (event) {
+      alert(`You clicked on button ${event.target.innerText}`);
+    });
+
+  // But that implemenation will lead to a bug, try to click between the button you will get alert "You clicked on button 1 2 3 4 5", so you can add a if-condition to make sure that it a "button" element first then target the innerText
+  document
+    .querySelector(".button-container")
+    .addEventListener("click", function (event) {
+      if (event.target.tagName === "BUTTON") {
+        alert(`You clicked on button ${event.target.innerText}`);
+      }
+    });
+  ```
+
 #### [3. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/project)
 
 ### Talking to Servers
