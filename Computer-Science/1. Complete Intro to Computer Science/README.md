@@ -15,6 +15,8 @@
 
 #### [2. Spatial Complexity](https://btholt.github.io/complete-intro-to-computer-science/spatial-complexity/)
 
+- This is another metric to choose what kind of algorithm to use for solving a problem in terms of memory in the RAM and Disk Space. Again, the answer to the questions will always be "It depends" on the context of the problem. In summary, there are four things that you need to be aware of regarding Spatial Complexity: `Linear`, `Logarithmic`, `Constant`, and `Quadratic`.
+
 #### [3. Trade Offs](https://btholt.github.io/complete-intro-to-computer-science/trade-offs/)
 
 ### Iterative Sorts
