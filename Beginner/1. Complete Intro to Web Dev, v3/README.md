@@ -476,21 +476,21 @@
 
 - `async` functions _always_ return `promises`. Despite the fact that we're not doing any awaiting in `getName`, because it's `async`, it returns a `promise`. This can catch people off guard. That's how async functions work and why `await` works: they're async, and therefore one may have to wait when you call them. For example:
 
-```javascript
-async function getName() {
-  return "Brian";
-}
+  ```javascript
+  async function getName() {
+    return "Brian";
+  }
 
-console.log("a promise", getName());
+  console.log("a promise", getName());
 
-getName().then(function (name) {
-  console.log("the actual name", name);
-});
+  getName().then(function (name) {
+    console.log("the actual name", name);
+  });
 
-/*
-"a promise" Promise {}
-Promise {}"the actual name" "Brian"
-*/
-```
+  /*
+  "a promise" Promise {}
+  Promise {}"the actual name" "Brian"
+  */
+  ```
 
 #### [4. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/project)
