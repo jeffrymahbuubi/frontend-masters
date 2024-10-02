@@ -1,6 +1,6 @@
 [submodule "Computer-Science/1. Complete Intro to Computer Science/algorithms-exercise"]
 	path = Computer-Science/1. Complete Intro to Computer Science/algorithms-exercise
 	url = git@github.com:jeffrymahbuubi/algorithms-exercises.git
-[submodule "Beginner/Elective/Getting-A-Software-Engineering-Job-V3"]
-	path = Beginner/Elective/Getting-A-Software-Engineering-Job-V3
-	url = https://github.com/FrontendMasters/getting-a-job-v3
+[submodule "Beginner/Elective/Getting-A-Software-Engineering-Job-V3/getting-a-job-v3"]
+	path = Beginner/Elective/Getting-A-Software-Engineering-Job-V3/getting-a-job-v3
+	url = git@github.com:FrontendMasters/getting-a-job-v3.git
