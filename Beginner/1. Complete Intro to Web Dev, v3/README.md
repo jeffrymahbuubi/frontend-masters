@@ -320,8 +320,177 @@
 
 #### [1. JSON](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/json)
 
+- JSON (JavaScript Object Notation), a standard language that frontend can interact with backend. So how we do it? We need to find a way to request the data from the server without refreshing the page. We can use a technique called AJAX, which is acronym that stands for (Asynchronous JavaScript and XML). But this method wasn't used anymore since no one now use XML.
+- An MDN Documentation of JSON can be visit [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON). A JSON is like JavaScript but the `key` value should be enclosed in `""` (quote notation)
+
+  ```json
+  {
+    "name": "Luna",
+    "age": 10,
+    "breed": "Havanese",
+    "location": {
+      "city": "Seattle",
+      "state": "WA"
+    }
+  }
+  ```
+
+- A built-in method in JavaScript callaed `JSON.parse` will parse JSON into a JavaScript Object that we can access as usual like given:
+
+  ```javascript
+  const responseObject = JSON.parse(responseFromServer);
+  console.log(responseObject);
+
+  /*
+      Object {
+    "age": 10,
+    "breed": "Havanese",
+    "location": Object {
+      "city": "Seattle",
+      "state": "WA",
+    },
+    "name": "Luna",
+  }
+  */
+  ```
+
+- On the other way around, if you want to create a JSON from JavaScript `Object`, you can use `JSON.stringify(Object)`, like given:
+
+  ```javascript
+  const dog = {
+    name: "Luna",
+    age: 10,
+    breed: "Havanese",
+    location: {
+      city: "Seattle",
+      state: "WA",
+    },
+  };
+
+  const objString = JSON.stringify(dog);
+  /*
+    "{\"name\":\"Luna\",\"age\":10,\"breed\":\"Havanese\",\"location\":{\"city\":\"Seattle\",\"state\":\"WA\"}}"
+  */
+  ```
+
 #### [2. AJAX](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/ajax)
 
+- JSON APIs: An API (Application Programming Interface) is a URL that you can make requests to in order to get information back from the server/backend. For more details, check [Web APIs by MDN](https://developer.mozilla.org/en-US/docs/Web/API).
+- Check out a collection of [publicly available APIs](https://github.com/toddmotto/public-apis).
+- For example, an API `api.example.com/weather?zip=98109`. The `?zip=98109` is called a query string. If you want multiple queries, they are separated by `&` (ampersand), e.g., `example.com/weather?zip=98109&day=tomorrow`.
+- A method to get the result of an API request is using `promises`, which represent a future value. With `promises`, we can use a function with its `then` method. We also use `fetch`, a built-in function that accepts a URL and tries to get information from the API. For example:
+
+  ```javascript
+  function addNewDoggo() {
+    const promise = fetch(DOG_URL);
+    promise
+      // first then
+      .then(function (response) {
+        const processingPromise = response.text();
+        return processingPromise;
+      })
+      // last then
+      .then(function (processedResponse) {
+        const dogObject = JSON.parse(processedResponse); // {"message":"https://images.dog.ceo/breeds/poodle-standard/n02113799_4642.jpg","status":"success"}
+        const img = document.createElement("img");
+        img.src = dogObject.message;
+        img.alt = "Cute doggo";
+        doggos.appendChild(img);
+      });
+  }
+  ```
+
+- **Requests** take time. Therefore, we need the ability to _wait_. This is called asynchronous (async) code. `fetch` returns a `promise`. We then need to handle the response from the API. In our case, we're saying it's going to be `text()`.
+- We use **promise chaining** because we don't know how long it will take to transform our response into text. By **returning the promise** at the end of the first `then`, we can use its data in the second `then`.
+- In the second `then`, we read the `message` which contains the URL, create an `img` tag, and append it to the DOM. The result is we get a cool dog picture!
+- Suppose we know that the response is `JSON`, which is often the case. We can do the following, thereby removing the need for `JSON.parse`:
+
+  ```javascript
+  function addNewDoggo() {
+    const promise = fetch(DOG_URL);
+    promise
+      // first then
+      .then(function (response) {
+        const processingPromise = response.JSON(); //  {"message":"https://images.dog.ceo/breeds/poodle-standard/n02113799_4642.jpg","status":"success"}
+        return processingPromise;
+      })
+      // last then
+      .then(function (processedResponse) {
+        const img = document.createElement("img");
+        img.src = processedResponse.message;
+        img.alt = "Cute doggo";
+        doggos.appendChild(img);
+      });
+  }
+  ```
+
 #### [3. async/await](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/async-await)
+
+- Using `promises` can make code hard to read. A much easier method is to use `async/await`, which is supported in recent versions of JavaScript. As follows:
+
+  ```javascript
+  const DOG_URL = "https://dog.ceo/api/breeds/image/random";
+
+  const doggos = document.getElementById("dog-target3");
+
+  async function addNewDoggo() {
+    const promise = await fetch(DOG_URL);
+    const processedResponse = await promise.json();
+    const img = document.createElement("img");
+    img.src = processedResponse.message;
+    img.alt = "Cute doggo";
+    doggos.appendChild(img);
+  }
+  ```
+
+- The `await` keyword can only be used inside `async` functions. All `await` does is tell your code to "pause execution of this function until this promise resolves." So, on the line `const promise = await fetch(DOG_URL);`, the function stops executing until your API call finishes.
+- An example of how to use `await` to gather results from multiple function calls:
+
+  ```javascript
+  async function getName(name) {
+    return name;
+  }
+
+  async function getLotsOfNames() {
+    const names = await Promise.all([
+      getName("Brian"),
+      getName("Casandra"),
+      getName("Reid"),
+      getName("Niki"),
+    ]);
+    console.log(names);
+  }
+
+  getLotsOfNames();
+
+  /*
+    Output:
+    [
+      "Brian",
+      "Casandra",
+      "Reid",
+      "Niki"
+    ]
+  */
+  ```
+
+- `async` functions _always_ return `promises`. Despite the fact that we're not doing any awaiting in `getName`, because it's `async`, it returns a `promise`. This can catch people off guard. That's how async functions work and why `await` works: they're async, and therefore one may have to wait when you call them. For example:
+
+```javascript
+async function getName() {
+  return "Brian";
+}
+
+console.log("a promise", getName());
+
+getName().then(function (name) {
+  console.log("the actual name", name);
+});
+
+/*
+"a promise" Promise {}
+Promise {}"the actual name" "Brian"
+*/
+```
 
 #### [4. Project](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/talking-to-servers/project)
